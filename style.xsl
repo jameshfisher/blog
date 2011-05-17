@@ -7,6 +7,19 @@
 		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		  <script src="hyphenate.js" type="text/javascript"></script>
 		  
+			<script type="text/javascript">
+		    var disqus_shortname = 'eegg';
+		
+		    var disqus_identifier = 'page_margins';
+		    var disqus_url = 'http://eegg.github.com/margins.xml';
+
+		    (function() {
+        		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+			</script>
+
 		  <title>eegg</title>
 		  <link rel="stylesheet" type="text/css" href="main.css" />
 		  <link rel="icon" type="image/png" href="favicon.png" />
@@ -20,18 +33,6 @@
 				<xsl:apply-templates />
 				<div id="disqus_thread"></div>
 			</div>
-			<script type="text/javascript">
-		    var disqus_shortname = 'eegg';
-		
-		    var disqus_identifier = 'page_margins';
-		    var disqus_url = 'http://example.com/permalink-to-page.html';
-
-		    (function() {
-        		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		    })();
-			</script>
 		</body>
 	</html>
 </xsl:template>
