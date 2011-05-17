@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+
+<article
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	version="5.0" xml:lang="en">
+
+	<para>
+		Imagine a book with no page margins.
+		The text runs right to the edge of the paper.
+		You'll have to crack the spine to gain access to characters in the gutter.
+		To access the text at the bottom, you have to move your thumbs our of the way.
+		If the book is a little old, the characters on the outside may be worn off entirely.
+		No header or footer is present, so navigation is a task.
+		To make a note on something you find, you'll have to write it between the lines.
+		We haven't even mentioned the fact that the book looks horrible,
+			or has forced the publisher through hoops to produce the book in full bleed.
+	</para>
+
+	<para>
+		The margin, then, is an essential element of all paged media.
+		It solves all the horrors above:
+			spinal injuries are greatly reduced;
+			the closed book when dropped has its content protected by a chunk of wood;
+			you can hold it comfortably;
+			page numbers and section titles guide you around;
+			you have space for marginalian comments;
+			the composition is pleasing;
+			and <quote>printing on the edge</quote> is no longer an issue (you can't do it with your home printer).
+	</para>
+
+	<section>
+		<title>Competing rationales</title>
+
+		<para>
+			So margins are a Good Thing.
+			In implementing them, though, we'll have to be more specific:
+				how big should the four margins (top, bottom, inside, outside) be, given the size of the book?
+		</para>
+
+		<para>
+			This simple question doesn't have a simple answer.
+			The big reason for this is <emphasis>competing rationales</emphasis>;
+			for each design consideration there is a different optimum:
+
+			<table>
+				<thead>
+					<row>
+						<entry>Goal</entry>
+						<entry>Ideal margin appearance</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry>Save the book's spine</entry>
+						<entry>Give precedence to the inside margin, especially in fat books.</entry>
+					</row>
+					<row>
+						<entry>Blank space for holding the book</entry>
+						<entry>Precedence to the bottom and outside margins.</entry>
+					</row>
+					<row>
+						<entry>Wear does not affect book content</entry>
+						<entry>Precedence equally to all but the inside margin, which doesn't wear.</entry>
+					</row>
+					<row>
+						<entry>Navigation is easy</entry>
+						<entry>Precedence to the top and bottom margins.</entry>
+					</row>
+					<row>
+						<entry>Ample space for reader's notes</entry>
+						<entry>Precedence to outside margin.</entry>
+					</row>
+					<row>
+						<entry>Pleasing composition</entry>
+						<entry>Printed area vertices lie on page <quote>ley lines</quote>; geometrical ratios.</entry>
+					</row>
+					<row>
+						<entry>Don't require print bleed</entry>
+						<entry>At least 5mm on all margins.</entry>
+					</row>
+				</tbody>
+			</table>
+		</para>
+
+		<para>
+			So different goals are pushing in different, sometimes opposite, directions.
+			Some goals are independent of the page <emphasis>area</emphasis>; some are not.
+			Some are independent of page <emphasis>ratio</emphasis>, others not.
+			Some are dependent on book length, others not, and so on.
+		</para>
+	</section>
+
+	<section>
+		<title>Canons of page construction</title>
+
+		<para>
+			Let's begin with the most complex of the design goals: <emphasis>pleasing composition</emphasis>.
+			Wikipedia calls these considerations the <link xlink:href="http://en.wikipedia.org/wiki/Canons_of_page_construction">canons of page construction</link>.
+			The geometrical means of constructing an ideal page seem long-standing and agreed upon.
+			Surprisingly, though, I couldn't find implemented algorithms online,
+				so over at github I'm hosting <link xlink:href="http://github.com/eegg/vandegraaf">a small library</link>
+				I've written for this article.
+		</para>
+
+
+		<para>
+			The <emphasis>first principle</emphasis> is that some ratios are <emphasis>better than others</emphasis>.
+			These ratios should be applied both to the page and to the printable area.
+			The less ratios in the composition, the letter. They are:
+
+			<itemizedlist>
+				<listitem>2 : 3</listitem>
+				<listitem>1 : φ (the golden ratio)</listitem>
+				<listitem>1 : √2 (the ratio governing A3, A4, A5 paper, <emphasis>etc.</emphasis>)</listitem>
+			</itemizedlist>
+		</para>
+
+		<para>
+			The <emphasis>second principle</emphasis> is that
+				the rectangle defining the printable area should have vertices that lie on what I would call <quote>ley lines</quote>.
+			If you have a two-page spread in front of you,
+				these lines are those you can draw between five vertices:
+				the four corners of the book plus the top of the gutter.
+		</para>
+
+		<para>
+			A <emphasis>third principle</emphasis>, not always applied,
+				is that the print width should be the same as the page height.
+		</para>
+
+		<para>
+			A few different methods exist over at Wikipedia, aiming for the above goals.
+			Most actually boil down to the same result: the <emphasis>Van de Graaf canon</emphasis>.
+			This is the most general algorithm,
+				and the two other main methods obtain the same result when the page ratio is 2 : 3.
+			I'll let you judge for yourself whether the results are pleasing.
+			In order of decreasing page height, these are outputs from my above script:
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-1-phi.png" />
+				</imageobject>
+				<caption>
+   					<para>The Van de Graaf Canon at 1:φ page ratio</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-2-3.png" />
+				</imageobject>
+				<caption>
+   					<para>The Van de Graaf Canon at 2:3 page ratio</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-1-sqrt2.png" />
+				</imageobject>
+				<caption>
+   					<para>The Van de Graaf Canon at 1: √2 page ratio</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-1-1.png" />
+				</imageobject>
+				<caption>
+   					<para>The Van de Graaf Canon at 1:1 page ratio</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-3-2.png" />
+				</imageobject>
+				<caption>
+   					<para>The Van de Graaf Canon at 3:2 page ratio</para>
+				</caption>
+			</mediaobject>
+		</para>
+
+		<para>
+			Let's say you agree with me that the above are beautiful.
+			Note that, looking at the right-hand page:
+
+			<itemizedlist>
+				<listitem>the printed area is the same shape as the page area</listitem>
+				<listitem>the top left and bottom right vertices of the printed area lie on the diagonal of the right-hand page</listitem>
+				<listitem>the top right vertex of the print area lies on the diagonal of the two-page spread</listitem>
+				<listitem>the gutter margins together are the same width as an outer margin</listitem>
+			</itemizedlist>
+		</para>
+	</section>
+
+	<section>
+		<title>Meditation on the Van de Graaf</title>
+
+		<para>
+			I would guess that your first thought after looking at these
+				(other than that they're attractive),
+				is that they are so liberal in their use of space.
+			I would secondly guess that your thinking that derives from experience:
+				have you ever seen a bottom margin as big as that on the 1:φ ratio?
+			Why not?
+			The answer lies firstly in the <emphasis>competing rationales</emphasis> above,
+				and secondly in more rationales,
+				aiming to reduce margins to nothing, that I now list here:
+
+			<itemizedlist>
+				<listitem><emphasis role="strong">Spend less on paper.</emphasis> Paper margins and profit margins aren't friends.</listitem>
+				<listitem><emphasis role="strong">Save trees.</emphasis> Publishers and consumers alike are conscious of the environment.</listitem>
+				<listitem>
+					<emphasis role="strong">Save space and weight.</emphasis>
+					Less margin means paying for less shelf space at the bookshop.
+					Volume and weight could be halved, which reduces transportation costs for the publisher and consumer
+					(you're travelling with your <emphasis>Comprehensive Travel Guide to Asia</emphasis>;
+						decide between buying the Van de Graaf edition,
+						or buying a zero-margin copy letting you squeeze another pastel-coloured holiday novel in your suitcase)
+				</listitem>
+			</itemizedlist>
+		</para>
+	</section>
+
+	<section>
+		<title>Data-gathering</title>
+
+		<para>
+			I've got about as far as I can with theory.
+			I decided at this point to take some measurements of some books on my shelf.
+			(The data from my twenty samples is in an OO spreadsheet in the about git repo.)
+			Here's some summary findings:
+
+			<itemizedlist>
+				<listitem>
+					Books, and the printable area, are taller and thinner than Jan Tischichold's use of the 2:3 ratio.
+					The average is 2:3.1 for page size, and 2:3.3 for printable area — hovering around 1:φ but not hitting it.
+				</listitem>
+				<listitem>
+					The printable area was invariably taller and thinner than the page area,
+						compared to the constant ration of the Van de Graaf.
+				</listitem>
+				<listitem>
+					Publishers can't decide between bigger outside margins
+						(space for comments, <emphasis>&amp;c.</emphasis>)
+						and bigger inside margins (saving cracked spines).
+					On average, the ratio of inside to outside was 1:1, but few or none hit that deliberately.
+				</listitem>
+			</itemizedlist>
+		</para>
+	</section>
+
+	<section>
+		<title>The Typography of Discworld</title>
+
+		<para>
+			I found many page constructions that were unappealing, niggardly, and un-functional.
+			However, I did come across a few that were not.
+			One neat one is in the Corgi editions of Terry Pratchett's Discworld books.
+			The construction is as follows.
+		</para>
+
+		<para>
+			Draw the diagonals of the full-page spread.
+			Next draw the 'V'-shape as in the Van de Graaf, but upside-down.
+			Mark the verticals at the intersections (thus dividing the spread into three equal slices, as in the Van de Graaf).
+			Draw diagonals from the intersections to the bottom of the vertical on the opposite page.
+			The new intersections are the inside bottom of the printable areas.
+			Draw two more diagonals, from the top of the verticals to the outside bottom corners of the same page.
+			From the two known printable area vertices, draw horizontally;
+				the intersection at the new diagonal is the outside bottom of the printable area.
+			Finally, draw vertically until you hit the 'V';
+				this marks the top of the printable area.
+			Look at it:
+		
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/discworld/discworld_canon.svg" />
+				</imageobject>
+				<caption>
+   					<para>Geometrically constructing the page of a Corgi Discworld book (my image)</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/van-de-graaf/van_de_graaf_canon.png" />
+				</imageobject>
+				<caption>
+   					<para>Constructing the Van de Graaf canon on the same page spread</para>
+				</caption>
+			</mediaobject>
+		</para>
+
+		<para>
+			The Discworld canon certainly looks similar in geometric spirit,
+				but they are dissimilar in other ways.
+			The Discworld gives you more page area (66% compared to 44%).
+			It throws most of the outside margin away,
+				disregarding the aesthetic principle that the gutter width should be the same as one outside margin.
+			Take a look at it on the same page ratios I used earlier:
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/discworld/discworld-1-phi.png" />
+				</imageobject>
+				<caption>
+   					<para>The Discworld canon at 1:φ ratio</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/discworld/discworld-2-3.png" />
+				</imageobject>
+				<caption>
+   					<para>The Discworld canon at 2:3</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/discworld/discworld-1-sqrt2.png" />
+				</imageobject>
+				<caption>
+   					<para>The Discworld canon at 1:√2</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/discworld/discworld-1-1.png" />
+				</imageobject>
+				<caption>
+   					<para>The Discworld canon at 1:1</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/discworld/discworld-3-2.png" />
+				</imageobject>
+				<caption>
+   					<para>The Discworld canon at 3:2</para>
+				</caption>
+			</mediaobject>
+		</para>
+	</section>
+
+	<section>
+		<title>Word processors, and designing a single-page canon</title>
+
+		<para>
+			<sidebar><para>Figures for Word are based on Google; I don't have access to an installation myself.</para></sidebar>
+			How do today's word processors implement page margins?
+			The first thing to note is that, by default, all pages are symmetrical:
+				there's no such thing as left and right pages.
+			Considering that its output will most likely be unbound A4 from a home printer, this makes sense.
+			Specifically, the following margins are set by default:
+
+			<table>
+				<thead>
+					<row>
+						<entry>Word processor</entry>
+						<entry>Top margin</entry>
+						<entry>Bottom margin</entry>
+						<entry>Inside margin</entry>
+						<entry>Outside margin</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+						<entry><emphasis role="strong">Microsoft Word</emphasis></entry>
+						<entry>1"</entry>
+						<entry>1"</entry>
+						<entry>1.25"</entry>
+						<entry>1.25"</entry>
+					</row>
+					<row>
+						<entry><emphasis role="strong">OpenOffice Writer</emphasis></entry>
+						<entry>20mm</entry>
+						<entry>20mm</entry>
+						<entry>20mm</entry>
+						<entry>20mm</entry>
+					</row>
+				</tbody>
+			</table>
+		</para>
+
+		<para>
+			How were these figures decided upon?
+			My guess is that foremost they're fetishes for an individual measurement system:
+				Word the imperial, Writer the metric.
+			Neither seems to be a good basis for a sensible default.
+			For example, when working with an A4 page,
+				in which the long side is an irrational figure (210mm × √2),
+				we would expect irrational figures for the margins, too.
+			Word's decision to go for <emphasis>larger</emphasis> side margins than end margins is especially odd;
+			my survey above put side margins at 60% of end margins.
+		</para>
+	</section>
+
+	<section>
+		<title>First attempt at a single-page canon</title>
+
+		<para>
+			The reason that word processors don't have agreed sensible margins is that,
+				seemingly, no canon has been designed for pages that are not part of a two-page spread.
+			So, why not use our principles from above to create one?
+			Let's proceed:
+
+			<orderedlist>
+				<listitem>We this time only work with four starting vertices: the four corners of a rectangle.</listitem>
+				<listitem>There are only two <quote>ley lines</quote>: the diagonals from one corner to its opposing corner.</listitem>
+				<listitem>We can (and so will) place the printable area's vertices on these leylines.</listitem>
+				<listitem>
+					The less ratios, the better: let's use the page ratio for the printable area ratio.
+					(So far is equivalent to a scaling-down of the page rectangle on its centre.
+					We just need one principle to fix the scale...)
+				</listitem>
+				<listitem>The printable height is equal to the page width.</listitem>
+			</orderedlist>
+		</para>
+
+		<para>
+			We end up with the following:
+
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/naive-single-page/single_page_canon.png" />
+				</imageobject>
+				<caption>
+   					<para>The naïve single-page canon</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/naive-single-page/single-2-3.png" />
+				</imageobject>
+				<caption>
+   					<para>The naïve single-page canon at 2:3</para>
+				</caption>
+			</mediaobject>
+		</para>
+
+		<para>
+			Lovely!
+			We've just bettered the two biggest word processing packages!
+			Or have we ...
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/naive-single-page/single-1-2.png" />
+				</imageobject>
+				<caption>
+   					<para>Naïve single-page canon at 1:2.  Only 25% of the page used.</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/naive-single-page/single-1-1.png" />
+				</imageobject>
+				<caption>
+   					<para>Naïve single-page canon at 1:1.  100% of the page used!</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/naive-single-page/single-3-2.png" />
+				</imageobject>
+				<caption>
+   					<para>Naïve single-page canon at 3:2.  A full 225% of the page used!</para>
+				</caption>
+			</mediaobject>
+		</para>
+	</section>
+
+	<section>
+		<title>A successful single-page canon: the Double-Circle</title>
+
+		<para>
+			Working on a 2:3-ratio sheet, I disregarded the other possibilities.
+			The naïve canon above varies the printable area wildly with the page ratio, and it won't do.
+			We need one that produces sensible results for all page shapes: tall, square, and fat.
+			I've developed one that does so, and I call it the <emphasis>Double-Circle Canon</emphasis>.
+			Here it is:
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/double-circle/double_circle_canon.png" />
+				</imageobject>
+				<caption>
+   					<para>Double-Circle canon at 2:3</para>
+				</caption>
+			</mediaobject>
+		</para>
+
+		<para>
+			And, as before, let's see it in action:
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/double-circle/double-circle-1-phi.png" />
+				</imageobject>
+				<caption>
+   					<para>The Double-Circle canon at 1:φ</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/double-circle/double-circle-2-3.png" />
+				</imageobject>
+				<caption>
+   					<para>The Double-Circle canon at 2:3</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/double-circle/double-circle-1-sqrt2.png" />
+				</imageobject>
+				<caption>
+   					<para>The Double-Circle canon at 1:√2</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/double-circle/double-circle-1-1.png" />
+				</imageobject>
+				<caption>
+   					<para>The Double-Circle canon at 1:1</para>
+				</caption>
+			</mediaobject>
+
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="page-margins/double-circle/double-circle-3-2.png" />
+				</imageobject>
+				<caption>
+   					<para>The Double-Circle canon at 3:2</para>
+				</caption>
+			</mediaobject>
+		</para>
+	</section>
+</article>
