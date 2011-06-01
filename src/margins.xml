@@ -148,7 +148,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-1-phi.png" />
+					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-1-phi.png" />
 				</imageobject>
 				<caption>
    					<para>The Van de Graaf Canon at 1:φ page ratio</para>
@@ -157,7 +157,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-2-3.png" />
+					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-2-3.png" />
 				</imageobject>
 				<caption>
    					<para>The Van de Graaf Canon at 2:3 page ratio</para>
@@ -166,7 +166,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-1-sqrt2.png" />
+					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-1-sqrt2.png" />
 				</imageobject>
 				<caption>
    					<para>The Van de Graaf Canon at 1: √2 page ratio</para>
@@ -175,7 +175,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-1-1.png" />
+					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-1-1.png" />
 				</imageobject>
 				<caption>
    					<para>The Van de Graaf Canon at 1:1 page ratio</para>
@@ -287,7 +287,7 @@
 		
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/discworld/discworld_canon.svg" />
+					<imagedata fileref="static/margins/discworld/discworld_canon.svg" />
 				</imageobject>
 				<caption>
    					<para>Geometrically constructing the page of a Corgi Discworld book (my image)</para>
@@ -296,7 +296,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/van-de-graaf/van_de_graaf_canon.png" />
+					<imagedata fileref="static/margins/van-de-graaf/van_de_graaf_canon.png" />
 				</imageobject>
 				<caption>
    					<para>Constructing the Van de Graaf canon on the same page spread</para>
@@ -314,7 +314,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/discworld/discworld-1-phi.png" />
+					<imagedata fileref="static/margins/discworld/discworld-1-phi.png" />
 				</imageobject>
 				<caption>
    					<para>The Discworld canon at 1:φ ratio</para>
@@ -323,7 +323,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/discworld/discworld-2-3.png" />
+					<imagedata fileref="static/margins/discworld/discworld-2-3.png" />
 				</imageobject>
 				<caption>
    					<para>The Discworld canon at 2:3</para>
@@ -332,7 +332,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/discworld/discworld-1-sqrt2.png" />
+					<imagedata fileref="static/margins/discworld/discworld-1-sqrt2.png" />
 				</imageobject>
 				<caption>
    					<para>The Discworld canon at 1:√2</para>
@@ -341,7 +341,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/discworld/discworld-1-1.png" />
+					<imagedata fileref="static/margins/discworld/discworld-1-1.png" />
 				</imageobject>
 				<caption>
    					<para>The Discworld canon at 1:1</para>
@@ -350,7 +350,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/discworld/discworld-3-2.png" />
+					<imagedata fileref="static/margins/discworld/discworld-3-2.png" />
 				</imageobject>
 				<caption>
    					<para>The Discworld canon at 3:2</para>
@@ -440,7 +440,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/naive-single-page/single_page_canon.png" />
+					<imagedata fileref="static/margins/naive-single-page/single_page_canon.png" />
 				</imageobject>
 				<caption>
    					<para>The naïve single-page canon</para>
@@ -449,7 +449,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/naive-single-page/single-2-3.png" />
+					<imagedata fileref="static/margins/naive-single-page/single-2-3.png" />
 				</imageobject>
 				<caption>
    					<para>The naïve single-page canon at 2:3</para>
@@ -464,7 +464,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/naive-single-page/single-1-2.png" />
+					<imagedata fileref="static/margins/naive-single-page/single-1-2.png" />
 				</imageobject>
 				<caption>
    					<para>Naïve single-page canon at 1:2.  Only 25% of the page used.</para>
@@ -473,7 +473,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/naive-single-page/single-1-1.png" />
+					<imagedata fileref="static/margins/naive-single-page/single-1-1.png" />
 				</imageobject>
 				<caption>
    					<para>Naïve single-page canon at 1:1.  100% of the page used!</para>
@@ -482,7 +482,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/naive-single-page/single-3-2.png" />
+					<imagedata fileref="static/margins/naive-single-page/single-3-2.png" />
 				</imageobject>
 				<caption>
    					<para>Naïve single-page canon at 3:2.  A full 225% of the page used!</para>
@@ -503,7 +503,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/double-circle/double_circle_canon.png" />
+					<imagedata fileref="static/margins/double-circle/double_circle_canon.png" />
 				</imageobject>
 				<caption>
    					<para>Double-Circle canon at 2:3</para>
@@ -516,7 +516,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/double-circle/double-circle-1-phi.png" />
+					<imagedata fileref="static/margins/double-circle/double-circle-1-phi.png" />
 				</imageobject>
 				<caption>
    					<para>The Double-Circle canon at 1:φ</para>
@@ -525,7 +525,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/double-circle/double-circle-2-3.png" />
+					<imagedata fileref="static/margins/double-circle/double-circle-2-3.png" />
 				</imageobject>
 				<caption>
    					<para>The Double-Circle canon at 2:3</para>
@@ -534,7 +534,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/double-circle/double-circle-1-sqrt2.png" />
+					<imagedata fileref="static/margins/double-circle/double-circle-1-sqrt2.png" />
 				</imageobject>
 				<caption>
    					<para>The Double-Circle canon at 1:√2</para>
@@ -543,7 +543,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/double-circle/double-circle-1-1.png" />
+					<imagedata fileref="static/margins/double-circle/double-circle-1-1.png" />
 				</imageobject>
 				<caption>
    					<para>The Double-Circle canon at 1:1</para>
@@ -552,7 +552,7 @@
 
 			<mediaobject>
 				<imageobject>
-					<imagedata fileref="page-margins/double-circle/double-circle-3-2.png" />
+					<imagedata fileref="static/margins/double-circle/double-circle-3-2.png" />
 				</imageobject>
 				<caption>
    					<para>The Double-Circle canon at 3:2</para>
