@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/xsl" href="style.xsl" ?>
+
+<article
+	xmlns="http://docbook.org/ns/docbook"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:m="http://www.w3.org/1998/Math/MathML"
+	version="5.0" xml:lang="en">
+
+  <title>The Thatcher effect in typography</title>
+
+  <para>
+  Near my home, on my dog-walking route, there's a small business called <quote>FDM.</quote>
+  Their initials are emblazoned in 2000pt capitals on the side of the property.
+  I don't know what it stands for, or what they do.
+  The reason I bring them up is a one screamingly disrespectful disregard for typography,
+    in what is an otherwise entirely sober Roman-esque sign.
+  </para>
+
+  <para>
+  I'm going to first show it to you upside down, in a fictional billboard advertisement sponsored by the lovely Jayma Mays:
+
+		<mediaobject>
+			<imageobject widthclass="full">
+				<imagedata fileref="static/thatcher-effect/flipped.png" />
+			</imageobject>
+			<caption>
+ 					<para>Delicious.</para>
+			</caption>
+		</mediaobject>
+  </para>
+
+  <para>
+  Lovely—both of them sexy and sophisticated;
+    both with subtle, clean curves that demand attention precisely due to their understatedness;
+    both enticing you, by just giving a little away, to look further.
+  </para>
+
+  <para>Right?</para>
+
+  <para>
+  Yes, until the potential customer stops sitting in the driver's seat upside-down,
+    or reverts from their hand-walking on the pavement:
+
+		<mediaobject>
+			<imageobject widthclass="full">
+				<imagedata fileref="static/thatcher-effect/right-side-up.png" />
+			</imageobject>
+			<caption>
+ 					<para>WTF?</para>
+			</caption>
+		</mediaobject>
+  </para>
+
+  <para>
+  WTF?!  Or should I say, MTF?
+  The <quote>M</quote> has suddenly broken in two and fallen in on itself.
+  Why was it considered a good idea to use an upside-down <quote>W</quote>
+    in place of the <quote>M</quote>
+    into which the artist had poured countless hours of labour
+    in order to be completely unobtrusive?
+  Is it intended as 'attention-grabbing'?
+  It works; but not all publicity is good publicity—I'm going to have to find myself a new dog-walking route.
+  </para>
+
+  <para>
+  <emphasis>
+    p.s. I'm sorry, Jayma.
+    Every stroke of the GIMP brush was like a dagger in your baby-soft skin.
+    But it was in the name of Typography!
+  </emphasis>
+  </para>
+</article>
