@@ -98,7 +98,7 @@ span.acronym {
 	font-variant: small-caps;
 }
 
-ul {
+ul, ol {
 	padding: 0;
 	margin: 1.4em 0 1.4em 0;
 }
