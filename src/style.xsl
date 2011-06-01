@@ -19,7 +19,6 @@
 		<head>
 		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-
       <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         "HTML-CSS": {
@@ -77,6 +76,13 @@
     <!-- TODO: levels -->
     <h2><span class="outdentHeader"><xsl:number level="multiple" count="dbk:section" /></span><xsl:apply-templates /></h2>
   </xsl:if>
+</xsl:template>
+
+<xsl:template match="dbk:abstract">
+  <div class="abstract">
+    <span class="abstractWord">Abstract</span>
+    <xsl:apply-templates />
+  </div>
 </xsl:template>
 
 <xsl:template match="dbk:blockquote">

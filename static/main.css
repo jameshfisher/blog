@@ -33,6 +33,15 @@ h2 {
     margin: 1.12em 0 1.12em -2.24em;
 }
 
+div.abstract {
+  margin: 0 0 1em 0;
+}
+
+div.abstract span.abstractWord {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
 div.header {
   background-color: #eeeee4;
   border-bottom: 1px solid #eaeae0;
