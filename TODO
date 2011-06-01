@@ -1,8 +1,8 @@
 Style Disqus comments consistently.
-Simple one-line page header.
-Float wide elements (tables/imgs) right to non-overlap marginal notes.
 Build system.
 Natural-width images.
 List of blog entries.
 Mysticize proportions.
 Migrate other blog entries.
+Conditionally load MathJax, etc; e.g. HTML-specific header include per page.
+Do hyphenation in generation not client-side script.
