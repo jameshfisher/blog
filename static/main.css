@@ -129,12 +129,7 @@ div.sidebar {
 }
 
 table {
-	width: 42em;
-  float: right;
-  clear: both;
-
 	border-collapse: collapse;
-	margin: 1.4em -12em 1.4em 0;
 	border: solid black;
 	border-width: 1px 0 1px 0;
 }
@@ -170,5 +165,25 @@ figcaption {
 	width: 42em;
   float: right;
   clear: both;
-  margin: 0 -12em 0 0;
+  margin: 1.4em -12em 1.4em 0;
+}
+
+
+/* DISQUS */
+
+table.dsq-global-toolbar-container {
+  border: 0;
+}
+
+li.dsq-comment div.dsq-comment-header {
+  background-image: none;
+  border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4em;
+}
+
+li.dsq-comment div.dsq-comment-footer {
+  
 }

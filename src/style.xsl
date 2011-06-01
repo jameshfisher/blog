@@ -128,7 +128,7 @@
 <xsl:template match="dbk:listitem"><li><xsl:apply-templates /></li></xsl:template>
 <xsl:template match="dbk:quote"><q><xsl:apply-templates /></q></xsl:template>
 
-<xsl:template match="dbk:table"><table><xsl:apply-templates /></table></xsl:template>
+<xsl:template match="dbk:table"><table class="widescreen"><xsl:apply-templates /></table></xsl:template>
 <xsl:template match="dbk:thead"><thead><xsl:apply-templates /></thead></xsl:template>
 <xsl:template match="dbk:tbody"><tbody><xsl:apply-templates /></tbody></xsl:template>
 <xsl:template match="dbk:row"><tr><xsl:apply-templates /></tr></xsl:template>
