@@ -1,19 +1,19 @@
 body { 
-    margin: 0;
-    background-color: #fffff4;
-    font-family: "Crimson";
+  margin: 0;
+  background-color: #fffff4;
+  font-family: "Crimson Text";
 	text-rendering: optimizeLegibility;
 	line-height: 1.4em;
 }
 
 div.header {
-    background-color: #eeeee4;
-    border-bottom: 1px solid #eaeae0;
+  background-color: #eeeee4;
+  border-bottom: 1px solid #eaeae0;
 }
 
 div.headerContents {
-    width: 30em;
-    margin: 0 auto 0 auto;
+  width: 30em;
+  margin: 0 auto 0 auto;
 }
 
 img.logo {
@@ -154,9 +154,4 @@ figure {
 
 figcaption {
 	font-style: italic;
-}
-
-
-#disqus_thread {
-	border: 1px solid red;
 }

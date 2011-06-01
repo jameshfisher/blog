@@ -1,37 +1,55 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<xsl:stylesheet version="1.0" xmlns:dbk="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="http://www.w3.org/1999/xhtml">
+<xsl:stylesheet version="1.0"
+  xmlns:dbk="http://docbook.org/ns/docbook"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:m="http://www.w3.org/1998/Math/MathML"
+  xmlns="http://www.w3.org/1999/xhtml">
+
+<xsl:output
+  method="html"
+  omit-xml-declaration="no"
+  />
 
 <xsl:template match="dbk:article">
-	<html lang="en"> <!-- TODO: from doc -->
+
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 		<head>
 		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		  <script src="hyphenate.js" type="text/javascript"></script>
-		  
-			<script type="text/javascript">
-		    var disqus_shortname = 'eegg';
-		
-		    var disqus_identifier = 'page_margins';
-		    var disqus_url = 'http://eegg.github.com/margins.xml';
 
-		    (function() {
-        		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		    })();
-			</script>
+
+      <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        "HTML-CSS": {
+          scale: 200
+        }
+      });
+      </script>
+      <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+		  <script type="text/javascript" src="hyphenate.js"></script>
+
+		  <link rel="stylesheet" type="text/css"  href='http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic' />
+		  <link rel="stylesheet" type="text/css"  href="main.css" />
+		  <link rel="icon"       type="image/png" href="favicon.png" />
 
 		  <title>eegg</title>
-		  <link rel="stylesheet" type="text/css" href="main.css" />
-		  <link rel="icon" type="image/png" href="favicon.png" />
 		</head>
-		<body class="hyphenate">
+		<body>
 			<div class="header">
-			    <div class="headerContents">
-			    </div>
+			    <div class="headerContents">foo</div>
 			</div>
 			<div class="main">
 				<xsl:apply-templates />
-				<div id="disqus_thread"></div>
+        
+        <div id="disqus_thread"></div>
+
+			  <script type="text/javascript">
+		      var disqus_shortname = 'eegg';
+		      var disqus_identifier = 'page_margins';
+		      var disqus_url = 'http://eegg.github.com/margins.xml';
+			  </script>
+			  <script src="http://eegg.disqus.com/embed.js" type="text/javascript"></script>
 			</div>
 		</body>
 	</html>
@@ -55,7 +73,7 @@
 </xsl:template>
 
 <xsl:template match="dbk:para">
-	<p>
+	<p class="hyphenate">
 		<xsl:apply-templates />
 	</p>
 </xsl:template>
@@ -120,6 +138,20 @@
 		</xsl:attribute>
 		<xsl:apply-templates />
 	</img>
+</xsl:template>
+
+<!-- pass through all MathML, dropping the namespace, except for the top element where we need the xmlns -->
+<xsl:template match="m:math">
+  <math>
+    <xsl:attribute name="xmlns">http://www.w3.org/1998/Math/MathML</xsl:attribute>
+    <xsl:apply-templates select="@*|node()"/>
+  </math>
+</xsl:template>
+<xsl:template match="m:*">
+  <xsl:element name="{local-name()}" use-attribute-sets="name-list">
+    <xsl:copy-of select="@*" />
+    <xsl:apply-templates select="node()"/>
+  </xsl:element>
 </xsl:template>
 
 </xsl:stylesheet>
