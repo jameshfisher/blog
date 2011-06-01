@@ -37,15 +37,10 @@
 		  <title>eegg</title>
 		</head>
 		<body>
-			<div class="header">
-			    <div id="headerContents">
-            <hgroup>
-              <h1>EEGG</h1>
-              <h2>What you need, when you need it</h2>
-            </hgroup>
-          </div>
-			</div>
 			<div class="main">
+        <div style="height: 1px; margin-bottom: -1px;"></div> <!-- margin-collapse hack -->
+        <div id="masthead">Eegg.</div>
+
 				<xsl:apply-templates />
         
         <div id="disqus_thread"></div>

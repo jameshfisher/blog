@@ -1,6 +1,7 @@
 body { 
   margin: 0;
-  background-color: #fffff4;
+  background-color: #fffff5;
+  background-image: url("bg.png");
   font-family: "Crimson Text";
 	text-rendering: optimizeLegibility;
 	line-height: 1.4em;
@@ -22,7 +23,7 @@ h1 {
     line-height: 1em;
     font-weight: normal;
     text-align: left;
-    margin: 2em 0 1em 0;
+    margin: 6em 0 2em 0;
 }
 
 h2 {
@@ -34,7 +35,7 @@ h2 {
 }
 
 div.abstract {
-  margin: 0 0 1em 0;
+  margin: 1em 0 1em 0;
 }
 
 div.abstract span.abstractWord {
@@ -42,30 +43,20 @@ div.abstract span.abstractWord {
   margin-right: 0.5em;
 }
 
-div.header {
-  background-color: #eeeee4;
-  border-bottom: 1px solid #eaeae0;
+
+div#masthead {
+	float: right;
+	clear: both;
+
+  padding: 0.5em;
+	margin: 0;
+
+  background-color: #a00;
+  color: #fffff5;
 }
 
-div#headerContents {
-  width: 30em;
-  margin: 0 auto 0 auto;
-}
-
-#headerContents h1 {
-  font-weight: bold;
-  font-size: 1em;
-  display: inline;
-  margin: 0 1em 0 0;
-}
-
-#headerContents h2 {
-  font-weight: normal;
-  font-size: 1em;
-  font-style: italic;
-  display: inline;
-  font-variant: normal;
-  margin: 0;
+div#masthead:hover {
+  background-color: black;
 }
 
 span.outdentHeader {
@@ -87,20 +78,10 @@ p * {
 
 a:link, a:visited, a:hover {
     color: black;
-    text-decoration: none;
-}
-
-a:before {
-	content: "‹";
-}
-
-a:after {
-	content: "›";
 }
 
 a:hover {
-    padding-bottom: 0px;
-    border-bottom: 1px solid black;
+  color: #a00;
 }
 
 blockquote {
@@ -148,9 +129,12 @@ div.sidebar {
 }
 
 table {
-	width: 40em;
+	width: 42em;
+  float: right;
+  clear: both;
+
 	border-collapse: collapse;
-	margin: 1.4em 0 1.4em 0;
+	margin: 1.4em -12em 1.4em 0;
 	border: solid black;
 	border-width: 1px 0 1px 0;
 }
@@ -180,4 +164,11 @@ figure {
 
 figcaption {
 	font-style: italic;
+}
+
+.widescreen {
+	width: 42em;
+  float: right;
+  clear: both;
+  margin: 0 -12em 0 0;
 }
