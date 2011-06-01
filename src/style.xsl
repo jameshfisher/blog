@@ -27,11 +27,11 @@
       </script>
       <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
-		  <script type="text/javascript" src="hyphenate.js"></script>
+		  <script type="text/javascript" src="static/hyphenate.js"></script>
 
 		  <link rel="stylesheet" type="text/css"  href='http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic' />
-		  <link rel="stylesheet" type="text/css"  href="main.css" />
-		  <link rel="icon"       type="image/png" href="favicon.png" />
+		  <link rel="stylesheet" type="text/css"  href="static/main.css" />
+		  <link rel="icon"       type="image/png" href="static/favicon.png" />
 
 		  <title>eegg</title>
 		</head>
