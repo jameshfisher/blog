@@ -62,8 +62,21 @@
 	</html>
 </xsl:template>
 
+
+<xsl:template match="dbk:section">
+	<section>
+		<xsl:apply-templates />
+	</section>
+</xsl:template>
+
 <xsl:template match="dbk:title">
-	<h2><span class="outdentHeader"><xsl:number level="multiple" count="dbk:section" /></span><xsl:apply-templates /></h2>
+  <xsl:if test="parent::dbk:article">
+    <h1 class="articleTitle"><xsl:apply-templates /></h1>
+  </xsl:if>
+  <xsl:if test="not(parent::dbk:article)">
+    <!-- TODO: levels -->
+    <h2><span class="outdentHeader"><xsl:number level="multiple" count="dbk:section" /></span><xsl:apply-templates /></h2>
+  </xsl:if>
 </xsl:template>
 
 <xsl:template match="dbk:blockquote">
@@ -85,11 +98,6 @@
 	</p>
 </xsl:template>
 
-<xsl:template match="dbk:section">
-	<section>
-		<xsl:apply-templates />
-	</section>
-</xsl:template>
 
 
 <xsl:template match="dbk:acronym">
