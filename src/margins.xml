@@ -147,7 +147,7 @@
 			In order of decreasing page height, these are outputs from my above script:
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-1-phi.png" />
 				</imageobject>
 				<caption>
@@ -156,7 +156,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-2-3.png" />
 				</imageobject>
 				<caption>
@@ -165,7 +165,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-1-sqrt2.png" />
 				</imageobject>
 				<caption>
@@ -174,7 +174,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/van-de-graaf/van-de-graaf-1-1.png" />
 				</imageobject>
 				<caption>
@@ -183,8 +183,8 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
-					<imagedata fileref="page-margins/van-de-graaf/van-de-graaf-3-2.png" />
+				<imageobject widthclass="full">
+					<imagedata fileref="static/page-margins/van-de-graaf/van-de-graaf-3-2.png" />
 				</imageobject>
 				<caption>
    					<para>The Van de Graaf Canon at 3:2 page ratio</para>
@@ -286,7 +286,7 @@
 			Look at it:
 		
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/discworld/discworld_canon.svg" />
 				</imageobject>
 				<caption>
@@ -295,8 +295,8 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
-					<imagedata fileref="static/margins/van-de-graaf/van_de_graaf_canon.png" />
+				<imageobject widthclass="full">
+					<imagedata fileref="static/margins/van-de-graaf/van_de_graaf_canon.svg" />
 				</imageobject>
 				<caption>
    					<para>Constructing the Van de Graaf canon on the same page spread</para>
@@ -439,7 +439,7 @@
 
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/naive-single-page/single_page_canon.png" />
 				</imageobject>
 				<caption>
@@ -448,7 +448,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/naive-single-page/single-2-3.png" />
 				</imageobject>
 				<caption>
@@ -463,7 +463,7 @@
 			Or have we ...
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/naive-single-page/single-1-2.png" />
 				</imageobject>
 				<caption>
@@ -472,7 +472,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/naive-single-page/single-1-1.png" />
 				</imageobject>
 				<caption>
@@ -481,7 +481,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/naive-single-page/single-3-2.png" />
 				</imageobject>
 				<caption>
@@ -502,7 +502,7 @@
 			Here it is:
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/double-circle/double_circle_canon.png" />
 				</imageobject>
 				<caption>
@@ -515,7 +515,7 @@
 			And, as before, let's see it in action:
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/double-circle/double-circle-1-phi.png" />
 				</imageobject>
 				<caption>
@@ -524,7 +524,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/double-circle/double-circle-2-3.png" />
 				</imageobject>
 				<caption>
@@ -533,7 +533,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/double-circle/double-circle-1-sqrt2.png" />
 				</imageobject>
 				<caption>
@@ -542,7 +542,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/double-circle/double-circle-1-1.png" />
 				</imageobject>
 				<caption>
@@ -551,7 +551,7 @@
 			</mediaobject>
 
 			<mediaobject>
-				<imageobject>
+				<imageobject widthclass="full">
 					<imagedata fileref="static/margins/double-circle/double-circle-3-2.png" />
 				</imageobject>
 				<caption>

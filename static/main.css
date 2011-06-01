@@ -148,8 +148,10 @@ table td {
 
 img {
 	display: block;
-	width: 100%;
 }
+
+img.widthAuto { width: auto; }
+img.widthFull { width: 100%; }
 
 figure {
 	display: block;

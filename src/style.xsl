@@ -148,12 +148,14 @@
 		</figcaption>
 	</div>
 </xsl:template>
-<xsl:template match="dbk:imagedata">
-	<img>
-		<xsl:attribute name="src">
-			<xsl:value-of select="@fileref" />
-		</xsl:attribute>
-		<xsl:apply-templates />
+<xsl:template match="dbk:imageobject">
+  <img>
+    <xsl:if test="@widthclass='full'"><xsl:attribute name="class">widthFull</xsl:attribute></xsl:if>
+    <xsl:if test="@widthclass='wide'"><xsl:attribute name="class">widthWide</xsl:attribute></xsl:if>
+    <xsl:if test="not(@widthclass='full' or @widthclass='wide')"><xsl:attribute name="class">widthAuto</xsl:attribute></xsl:if>
+	  <xsl:attribute name="src">
+		  <xsl:value-of select="dbk:imagedata[1]/@fileref" />
+	  </xsl:attribute>
 	</img>
 </xsl:template>
 
