@@ -9,11 +9,13 @@
 <xsl:output
   method="html"
   omit-xml-declaration="no"
+  encoding="utf-8"
+  indent="no" 
   />
 
 <xsl:template match="dbk:article">
-
-	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
+	<html lang="en">
 		<head>
 		  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -37,7 +39,12 @@
 		</head>
 		<body>
 			<div class="header">
-			    <div class="headerContents">foo</div>
+			    <div id="headerContents">
+            <hgroup>
+              <h1>EEGG</h1>
+              <h2>What you need, when you need it</h2>
+            </hgroup>
+          </div>
 			</div>
 			<div class="main">
 				<xsl:apply-templates />

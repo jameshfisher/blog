@@ -6,16 +6,6 @@ body {
 	line-height: 1.4em;
 }
 
-div.header {
-  background-color: #eeeee4;
-  border-bottom: 1px solid #eaeae0;
-}
-
-div.headerContents {
-  width: 30em;
-  margin: 0 auto 0 auto;
-}
-
 img.logo {
     width: 15em;
     height: 15em;
@@ -40,6 +30,32 @@ h2 {
     font-size: 1.25em;
     line-height: 1.12em; /* 1.4 / 1.25 */
     margin: 1.12em 0 1.12em -2.24em;
+}
+
+div.header {
+  background-color: #eeeee4;
+  border-bottom: 1px solid #eaeae0;
+}
+
+div#headerContents {
+  width: 30em;
+  margin: 0 auto 0 auto;
+}
+
+#headerContents h1 {
+  font-weight: bold;
+  font-size: 1em;
+  display: inline;
+  margin: 0 1em 0 0;
+}
+
+#headerContents h2 {
+  font-weight: normal;
+  font-size: 1em;
+  font-style: italic;
+  display: inline;
+  font-variant: normal;
+  margin: 0;
 }
 
 span.outdentHeader {
