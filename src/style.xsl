@@ -108,6 +108,7 @@
 <xsl:template match="dbk:emphasis"><em><xsl:apply-templates /></em></xsl:template>
 
 <xsl:template match="dbk:itemizedlist"><ul><xsl:apply-templates /></ul></xsl:template>
+<xsl:template match="dbk:orderedlist"><ol><xsl:apply-templates /></ol></xsl:template>
 <xsl:template match="dbk:listitem"><li><xsl:apply-templates /></li></xsl:template>
 <xsl:template match="dbk:quote"><q><xsl:apply-templates /></q></xsl:template>
 
