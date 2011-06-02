@@ -240,7 +240,7 @@
     <para>
       I've got about as far as I can with theory.
       I decided at this point to take some measurements of some books on my shelf.
-      (The data from my twenty samples is in an OO spreadsheet in the about git repo.)
+      The data from my twenty samples is in an OO spreadsheet, available <link xlink:href="static/margins/books.ods">here</link>.
       Here's some summary findings:
 
       <itemizedlist>
@@ -306,9 +306,6 @@
 
     <para>
       The Discworld canon certainly looks similar in geometric spirit to the Van de Graaf.
-      The beginning of the construction is the same, but upside-down.
-      The bottom-inside page corner of the Discworld and the top-inside page corner of the Van de Graaf
-        bear the same relation to the page.
       Here's a comparison:
 
       <mediaobject>
@@ -326,11 +323,24 @@
     </para>
 
     <para>
+      The beginning of the construction is the same, but upside-down.
+      Thus the bottom-inside page corner of the Discworld
+        and the top-inside page corner of the Van de Graaf
+        bear the same relation to the page.
+      Both have a text area in the same proportions as the page.
+      Both are <quote>straight-edge</quote> constructions,
+        one consequence of which is that they are invariant over page proportion
+        (that is, the text block constructed on page of proportion A
+        is the same as that constructed on page of proportion B and subsequently stretched to proportion A).
+    </para>
+
+    <para>
       However, they are dissimilar in other ways.
+      The outside edge of the Discworld
+        is extended out to touch the line diagonal to the one-third of the spread.
       The Discworld gives you more page area (66% compared to 44%).
       It throws most of the outside margin away,
         disregarding the aesthetic principle that the gutter width should be the same as one outside margin.
-      The Discworld's text area is the same shape as the page.
       Take a look at it on the same page ratios I used earlier:
 
       <mediaobject>
@@ -384,7 +394,7 @@
     <title>Word processors, and designing a single-page canon</title>
 
     <para>
-      <sidebar><para>Figures for Word are based on Google; I don't have access to an installation myself.</para></sidebar>
+      <sidebar><para>Figures for Word are based on Google.</para></sidebar>
       How do today's word processors implement page margins?
       The first thing to note is that, by default, all pages are symmetrical:
         there's no such thing as left and right pages.
@@ -403,18 +413,18 @@
         </thead>
         <tbody>
           <row>
-            <entry><emphasis role="strong">Microsoft Word</emphasis></entry>
-            <entry>1"</entry>
-            <entry>1"</entry>
-            <entry>1.25"</entry>
-            <entry>1.25"</entry>
-          </row>
-          <row>
             <entry><emphasis role="strong">OpenOffice Writer</emphasis></entry>
             <entry>20mm</entry>
             <entry>20mm</entry>
             <entry>20mm</entry>
             <entry>20mm</entry>
+          </row>
+          <row>
+            <entry><emphasis role="strong">Microsoft Word</emphasis></entry>
+            <entry>1"≈25mm</entry>
+            <entry>1"≈25mm</entry>
+            <entry>1.25"≈32mm</entry>
+            <entry>1.25"≈32mm</entry>
           </row>
         </tbody>
       </table>
@@ -451,7 +461,7 @@
           (So far is equivalent to a scaling-down of the page rectangle on its centre.
           We just need one principle to fix the scale...)
         </listitem>
-        <listitem>The printable height is equal to the page width.</listitem>
+        <listitem>The text height is equal to the page width.</listitem>
       </orderedlist>
     </para>
 
@@ -513,72 +523,58 @@
   </section>
 
   <section>
-    <title>A successful single-page canon: the Double-Circle</title>
-
+    <title>A successful single-page canon: the <quote>one ninth</quote> canon</title>
+    
     <para>
-      Working on a 2:3-ratio sheet, I disregarded the other possibilities.
       The naïve canon above varies the printable area wildly with the page ratio, and it won't do.
       We need one that produces sensible results for all page shapes: tall, square, and fat.
-      I've developed one that does so, and I call it the <emphasis>Double-Circle Canon</emphasis>.
-      Here it is:
+      The reason that the above canon does not scale to other proportions is the fifth principle:
+      <quote>The text height is equal to the page width.</quote>
+      We must drop this.
+      We can keep the principle that the text corners lay on the page diagonals,
+        which fixes in place the text block proportions and its position.
+      But we need to find another principle on which to decide on the <emphasis>size</emphasis> of the text block.
+    </para>
+
+    <para>
+      Let's extract that principle from the two-page canons.
+      In the same vein as the Discworld canon,
+        let's extend the outside margin a little differently—this time,to the same width as the inside.
+      Geometrically, this simply means extending to the single-page diagonal.
+      We end up with this:
 
       <mediaobject>
         <imageobject widthclass="full">
-          <imagedata fileref="static/margins/double-circle/double_circle_canon.png" />
+          <imagedata fileref="static/margins/one-ninth/one-ninth-double-page.svg" />
         </imageobject>
         <caption>
-             <para>Double-Circle canon at 2:3</para>
+             <para>Straight-edge construction of the one-ninth canon at 2:3.</para>
         </caption>
       </mediaobject>
     </para>
 
     <para>
-      And, as before, let's see it in action:
+      Be under no illusion about the seemingly arcane geometric construction.
+      The end result is simply that every margin is <emphasis>one-ninth</emphasis> of the page dimension.
+      Here's the same page:
 
       <mediaobject>
         <imageobject widthclass="full">
-          <imagedata fileref="static/margins/double-circle/double-circle-1-phi.png" />
+          <imagedata fileref="static/margins/one-ninth/one-ninth-double-page-proportions.svg" />
         </imageobject>
         <caption>
-             <para>The Double-Circle canon at 1:φ</para>
-        </caption>
-      </mediaobject>
-
-      <mediaobject>
-        <imageobject widthclass="full">
-          <imagedata fileref="static/margins/double-circle/double-circle-2-3.png" />
-        </imageobject>
-        <caption>
-             <para>The Double-Circle canon at 2:3</para>
-        </caption>
-      </mediaobject>
-
-      <mediaobject>
-        <imageobject widthclass="full">
-          <imagedata fileref="static/margins/double-circle/double-circle-1-sqrt2.png" />
-        </imageobject>
-        <caption>
-             <para>The Double-Circle canon at 1:√2</para>
-        </caption>
-      </mediaobject>
-
-      <mediaobject>
-        <imageobject widthclass="full">
-          <imagedata fileref="static/margins/double-circle/double-circle-1-1.png" />
-        </imageobject>
-        <caption>
-             <para>The Double-Circle canon at 1:1</para>
-        </caption>
-      </mediaobject>
-
-      <mediaobject>
-        <imageobject widthclass="full">
-          <imagedata fileref="static/margins/double-circle/double-circle-3-2.png" />
-        </imageobject>
-        <caption>
-             <para>The Double-Circle canon at 3:2</para>
+             <para>One-ninth canon at 2:3; lines dividing the page into ninths.</para>
         </caption>
       </mediaobject>
     </para>
+
+    <para>
+      The page is divided into 9×9=81 units, of which 7×7=49 are used by the text block.
+      The one-ninth canon therefore uses 49÷81≈60% of the page, regardless of page proportions.
+      On an A4 page,
+        the side margins are 2⅓ cm,
+        and the top and bottom margins ≈3⅓ cm.
+    </para>
   </section>
+
 </article>

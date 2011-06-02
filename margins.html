@@ -214,7 +214,7 @@
     <p class="hyphenate">
       I've got about as far as I can with theory.
       I decided at this point to take some measurements of some books on my shelf.
-      (The data from my twenty samples is in an OO spreadsheet in the about git repo.)
+      The data from my twenty samples is in an OO spreadsheet, available <a href="static/margins/books.ods">here</a>.
       Here's some summary findings:
 
       <ul>
@@ -270,9 +270,6 @@
 
     <p class="hyphenate">
       The Discworld canon certainly looks similar in geometric spirit to the Van de Graaf.
-      The beginning of the construction is the same, but upside-down.
-      The bottom-inside page corner of the Discworld and the top-inside page corner of the Van de Graaf
-        bear the same relation to the page.
       Here's a comparison:
 
       <figure><div class="sidebar"><figcaption>
@@ -285,11 +282,24 @@
     </p>
 
     <p class="hyphenate">
+      The beginning of the construction is the same, but upside-down.
+      Thus the bottom-inside page corner of the Discworld
+        and the top-inside page corner of the Van de Graaf
+        bear the same relation to the page.
+      Both have a text area in the same proportions as the page.
+      Both are <q>straight-edge</q> constructions,
+        one consequence of which is that they are invariant over page proportion
+        (that is, the text block constructed on page of proportion A
+        is the same as that constructed on page of proportion B and subsequently stretched to proportion A).
+    </p>
+
+    <p class="hyphenate">
       However, they are dissimilar in other ways.
+      The outside edge of the Discworld
+        is extended out to touch the line diagonal to the one-third of the spread.
       The Discworld gives you more page area (66% compared to 44%).
       It throws most of the outside margin away,
         disregarding the aesthetic principle that the gutter width should be the same as one outside margin.
-      The Discworld's text area is the same shape as the page.
       Take a look at it on the same page ratios I used earlier:
 
       <figure><div class="sidebar"><figcaption>
@@ -318,7 +328,7 @@
     <h2><span class="outdentHeader">6</span>Word processors, and designing a single-page canon</h2>
 
     <p class="hyphenate">
-      <div class="sidebar"><p class="hyphenate">Figures for Word are based on Google; I don't have access to an installation myself.</p></div>
+      <div class="sidebar"><p class="hyphenate">Figures for Word are based on Google.</p></div>
       How do today's word processors implement page margins?
       The first thing to note is that, by default, all pages are symmetrical:
         there's no such thing as left and right pages.
@@ -337,18 +347,18 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Microsoft Word</strong></td>
-            <td>1"</td>
-            <td>1"</td>
-            <td>1.25"</td>
-            <td>1.25"</td>
-          </tr>
-          <tr>
             <td><strong>OpenOffice Writer</strong></td>
             <td>20mm</td>
             <td>20mm</td>
             <td>20mm</td>
             <td>20mm</td>
+          </tr>
+          <tr>
+            <td><strong>Microsoft Word</strong></td>
+            <td>1"≈25mm</td>
+            <td>1"≈25mm</td>
+            <td>1.25"≈32mm</td>
+            <td>1.25"≈32mm</td>
           </tr>
         </tbody>
       </table>
@@ -385,7 +395,7 @@
           (So far is equivalent to a scaling-down of the page rectangle on its centre.
           We just need one principle to fix the scale...)
         </li>
-        <li>The printable height is equal to the page width.</li>
+        <li>The text height is equal to the page width.</li>
       </ol>
     </p>
 
@@ -422,7 +432,49 @@
   </section>
 
   <section>
-    <h2><span class="outdentHeader">8</span>A successful single-page canon: the Double-Circle</h2>
+    <h2><span class="outdentHeader">8</span>A successful single-page canon: the <q>one ninth</q> canon</h2>
+    
+    <p class="hyphenate">
+      The reason that the above canon does not scale to other proportions is the fifth principle:
+      <q>The text height is equal to the page width.</q>
+      We must drop this.
+      We can keep the principle that the text corners lay on the page diagonals,
+        which fixes in place the text block proportions and its position.
+      But we need to find another principle on which to decide on the <em>size</em> of the text block.
+    </p>
+
+    <p class="hyphenate">
+      Let's extract that principle from the two-page canons.
+      In the same vein as the Discworld canon,
+        let's extend the outside margin a little differently—this time,to the same width as the inside.
+      Geometrically, this simply means extending to the single-page diagonal.
+      We end up with this:
+
+      <figure><div class="sidebar"><figcaption>
+             <p class="hyphenate">Straight-edge construction of the one-ninth canon at 2:3.</p>
+        </figcaption></div><img class="widthFull" src="static/margins/one-ninth/one-ninth-double-page.svg"></img></figure>
+    </p>
+
+    <p class="hyphenate">
+      Be under no illusion about the seemingly arcane geometric construction.
+      The end result is simply that every margin is <em>one-ninth</em> of the page dimension.
+      Here's the same page:
+
+      <figure><div class="sidebar"><figcaption>
+             <p class="hyphenate">One-ninth canon at 2:3; lines diving the page into ninths.</p>
+        </figcaption></div><img class="widthFull" src="static/margins/one-ninth/one-ninth-double-page-proportions.svg"></img></figure>
+    </p>
+
+    <p class="hyphenate">
+      The page is divided into 9×9=81 units, of which 7×7=49 are used by the text block.
+      The one-ninth canon therefore uses 49÷81≈60% of the page, regardless of page proportions.
+      On an A4 page, the side margins are 2⅓ cm, and the top and bottom margins ≈3⅓ cm.
+    </p>
+    
+  </section>
+
+  <section>
+    <h2><span class="outdentHeader">9</span>A successful single-page canon: the Double-Circle</h2>
 
     <p class="hyphenate">
       Working on a 2:3-ratio sheet, I disregarded the other possibilities.

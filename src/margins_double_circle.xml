@@ -1,0 +1,68 @@
+
+  <section>
+    <title>A successful single-page canon: the Double-Circle</title>
+
+    <para>
+      Working on a 2:3-ratio sheet, I disregarded the other possibilities.
+      I've developed one that does so, and I call it the <emphasis>Double-Circle Canon</emphasis>.
+      Here it is:
+
+      <mediaobject>
+        <imageobject widthclass="full">
+          <imagedata fileref="static/margins/double-circle/double_circle_canon.png" />
+        </imageobject>
+        <caption>
+             <para>Double-Circle canon at 2:3</para>
+        </caption>
+      </mediaobject>
+    </para>
+
+    <para>
+      And, as before, let's see it in action:
+
+      <mediaobject>
+        <imageobject widthclass="full">
+          <imagedata fileref="static/margins/double-circle/double-circle-1-phi.png" />
+        </imageobject>
+        <caption>
+             <para>The Double-Circle canon at 1:φ</para>
+        </caption>
+      </mediaobject>
+
+      <mediaobject>
+        <imageobject widthclass="full">
+          <imagedata fileref="static/margins/double-circle/double-circle-2-3.png" />
+        </imageobject>
+        <caption>
+             <para>The Double-Circle canon at 2:3</para>
+        </caption>
+      </mediaobject>
+
+      <mediaobject>
+        <imageobject widthclass="full">
+          <imagedata fileref="static/margins/double-circle/double-circle-1-sqrt2.png" />
+        </imageobject>
+        <caption>
+             <para>The Double-Circle canon at 1:√2</para>
+        </caption>
+      </mediaobject>
+
+      <mediaobject>
+        <imageobject widthclass="full">
+          <imagedata fileref="static/margins/double-circle/double-circle-1-1.png" />
+        </imageobject>
+        <caption>
+             <para>The Double-Circle canon at 1:1</para>
+        </caption>
+      </mediaobject>
+
+      <mediaobject>
+        <imageobject widthclass="full">
+          <imagedata fileref="static/margins/double-circle/double-circle-3-2.png" />
+        </imageobject>
+        <caption>
+             <para>The Double-Circle canon at 3:2</para>
+        </caption>
+      </mediaobject>
+    </para>
+  </section>
